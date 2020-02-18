@@ -1,0 +1,35 @@
+Confirmacion de correo
+
+Crear una cuenta de google
+
+Gstionar tu cuenta de google
+Hacer la autenticacion dos pasos
+
+
+Crear contraseña de aplicacion
+Seleccionamos otro y ponemos el nombre
+
+
+Contraseña aplicacion: plvvdtwqzerydgcv
+
+Hacer esto en cada pc donde este el programa ya que no se guarda en git
+Copiar en un archivo nuevo en la raiz .env cuyo contenido es SMTP_PASS = contraseña
+
+En web.php dentro de config hay un componente de aplicaacion llamado mailer. (Se accede con Yii::$app->mailer)
+
+useFileTransport a false
+Descomentar transport
+
+En params.php: 'smtpUsername' => 'confirmvmmarr@gmail.com'
+
+Crear accionCorreo ()
+
+Yii::$app->mailer->compose()
+		->setFrom(Yii::$app->params['smtpUsername'])
+		-setTo('')
+		->setSubject('Asunto?)
+		->setBody('texto')
+		->send();
+
+
+
