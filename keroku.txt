@@ -28,3 +28,5 @@ heroku pg:psql < db/'bd'
 ejecutar migracion
 
 heroku run ".yii/migrate"
+
+cambiar una release heroku releases:rollback version
